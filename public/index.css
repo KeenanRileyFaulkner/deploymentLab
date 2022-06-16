@@ -1,5 +1,7 @@
 body {
     margin: 0;
+    background-image: url("images/background.jpg");
+    background-size: cover;
 }
 
 .header {
@@ -7,8 +9,14 @@ body {
     height: 150px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    background: none;
+}
+
+.header-contents {
+    width: 70vw;
+    display: flex;
     justify-content: space-between;
-    background-image: url("images/BlackRaisin2.webp");
 }
 
 .profile-pic {
@@ -16,11 +24,12 @@ body {
     width: 100px;
     border-radius: 100%;
     border: 3px white;
+    box-sizing: border-box;
     margin-left: 15px;
 }
 
 .header-title {
-    color: white;
+    color: #0C0A3E;
     align-self: center;
     justify-self: center;
     margin: auto;
