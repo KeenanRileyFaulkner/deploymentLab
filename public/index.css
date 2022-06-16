@@ -26,6 +26,8 @@ body {
     border: 3px black;
     box-sizing: border-box;
     font-family: 'Work Sans', sans-serif;
+    color: white;
+    background-color: black;
     font-weight: 800;
     font-size: 24pt;
 }
@@ -35,4 +37,7 @@ body {
     align-self: center;
     justify-self: center;
     margin: auto;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    
 }
