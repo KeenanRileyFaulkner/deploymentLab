@@ -14,18 +14,20 @@ body {
 }
 
 .header-contents {
-    width: 70vw;
+    width: 50vw;
     display: flex;
     justify-content: space-between;
 }
 
-.profile-pic {
+.logo {
     height: 100px;
     width: 100px;
     border-radius: 100%;
-    border: 3px white;
+    border: 3px black;
     box-sizing: border-box;
-    margin-left: 15px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 800;
+    font-size: 24pt;
 }
 
 .header-title {
