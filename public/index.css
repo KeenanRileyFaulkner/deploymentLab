@@ -20,8 +20,8 @@ body {
 }
 
 .logo {
-    height: 100px;
-    width: 100px;
+    height: 50px;
+    width: 50px;
     border-radius: 100%;
     border: 3px black;
     box-sizing: border-box;
@@ -30,6 +30,8 @@ body {
     background-color: black;
     font-weight: 800;
     font-size: 24pt;
+    margin-right: 20px;
+    text-align: center;
 }
 
 .header-title {
