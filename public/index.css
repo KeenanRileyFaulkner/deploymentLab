@@ -1,3 +1,7 @@
+body {
+    margin: 0;
+}
+
 .header {
     width: screen;
     height: 150px;
@@ -12,8 +16,11 @@
     width: 75px;
     border-radius: 100%;
     border: 3px white;
+    margin-left: 15px;
 }
 
 .header-title {
     color: white;
+    align-self: center;
+    justify-self: center;
 }
