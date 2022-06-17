@@ -10,7 +10,7 @@ subscribeBtn.addEventListener('click', () => {
     }
     if(validateAddress(email.value)) {
         let body = {
-            email: email.value
+            email: email.value.toLowerCase()
         }
 
         axios.post(baseURL, body).then(responseCallback).catch(errCallback);
@@ -23,7 +23,7 @@ subscribeBtn.addEventListener('click', () => {
 unsubscribeBtn.addEventListener('click', () => {
     if(validateAddress(email.value)) {
         let body = {
-            email: email.value
+            email: email.value.toLowerCase()
         }
 
         axios.put(baseURL, body).then(responseCallback).catch(errCallback);
