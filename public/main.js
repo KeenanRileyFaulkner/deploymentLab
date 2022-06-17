@@ -22,8 +22,10 @@ subscribeBtn.addEventListener('click', () => {
 
 unsubscribeBtn.addEventListener('click', () => {
     if(validateAddress(email.value)) {
+        const emailToSend = email.value.toLowerCase();
+        console.log(emailToSend);
         let body = {
-            email: email.value.toLowerCase()
+            email: emailToSend
         }
 
         axios.put(baseURL, body).then(responseCallback).catch(errCallback);
