@@ -71,6 +71,7 @@ body {
     flex-wrap: wrap;
     align-items: flex-end;
     margin-right: 5px;
+    padding: 5px;
 }
 
 .email-input {
@@ -120,6 +121,7 @@ body {
 
 .description {
     margin-left: 20px;
+    padding: 5px;
     width: 25vw;
     min-width: 250px;
     font-family: 'Work Sans', sans-serif;
