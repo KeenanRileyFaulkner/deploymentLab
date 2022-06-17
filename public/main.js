@@ -9,8 +9,9 @@ subscribeBtn.addEventListener('click', () => {
         return;
     }
     if(validateAddress(email.value)) {
+        const emailToSend = email.value.toLowerCase();
         let body = {
-            email: email.value.toLowerCase()
+            email: emailToSend;
         }
 
         axios.post(baseURL, body).then(responseCallback).catch(errCallback);
@@ -23,7 +24,6 @@ subscribeBtn.addEventListener('click', () => {
 unsubscribeBtn.addEventListener('click', () => {
     if(validateAddress(email.value)) {
         const emailToSend = email.value.toLowerCase();
-        console.log(emailToSend);
         let body = {
             email: emailToSend
         }
