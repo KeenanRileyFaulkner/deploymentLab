@@ -17,8 +17,8 @@ module.exports = {
             INSERT INTO emails(email)
             VALUES ('${email}');
         `)
-            .then(dbRes => res.status(200).send(dbRes[0]))
-            .catch(err => console.log(err));
+            .then(() => res.status(200).send('Successfully subscribed'))
+            .catch((err) => console.log(err));
     },
 
     removeEmail: (req, res) => {
@@ -26,7 +26,7 @@ module.exports = {
         sequelize.query(`
             DELETE FROM emails WHERE email IN ('${email}');
         `)
-            .then(dbRes => res.status(200).send(dbRes[0]))
-            .catch(err => console.log(err));
+            .then(() => res.status(200).send('You have been unsubscribed'))
+            .catch((err) => console.log(err));
     }
 }

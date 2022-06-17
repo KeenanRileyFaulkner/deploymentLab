@@ -43,12 +43,8 @@ const validateAddress = (email) => {
 }
 
 const responseCallback = res => {
-    if(res.status !== 200) {
-        alert('There was an error processing your request. Try again later.');
-    } else {
-        alert(`${res.data}`);
-    }
-    email.value = '';
+    alert(`${res.data}`)
+    email.value = ''
 }
 
 const errCallback = err => console.log(err);
