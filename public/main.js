@@ -3,7 +3,8 @@ const unsubscribeBtn = document.getElementsByClassName('unsubscribe-button')[0];
 const email = document.getElementsByClassName('email-input')[0];
 const baseURL = 'https://kf017036-landing-page.herokuapp.com/emails'
 
-subscribeBtn.addEventListener('click', () => {
+subscribeBtn.addEventListener('click', (e) => {
+    e.preventDefault();
     //get the text in input element
     if(email.value === '') {
         return;
@@ -21,7 +22,8 @@ subscribeBtn.addEventListener('click', () => {
     }
 });
 
-unsubscribeBtn.addEventListener('click', () => {
+unsubscribeBtn.addEventListener('click', (e) => {
+    e.preventDefault();
     if(validateAddress(email.value)) {
         const emailToSend = email.value.toLowerCase();
         let body = {
