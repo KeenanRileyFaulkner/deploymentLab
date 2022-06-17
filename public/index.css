@@ -19,7 +19,8 @@ body {
     justify-content: space-between;
 }
 
-.logo {
+/* Bag the logo. It looks bad. */
+/* .logo {
     height: 50px;
     width: 50px;
     border-radius: 100%;
@@ -33,7 +34,7 @@ body {
     margin-left: 100px;
     text-align: center;
     align-items: center;
-}
+} */
 
 .header-title {
     color: #0C0A3E;
