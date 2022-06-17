@@ -1,10 +1,10 @@
 const subscribeBtn = document.getElementsByClassName('subscribe-button')[0];
 const unsubscribeBtn = document.getElementsByClassName('unsubscribe-button')[0];
+const email = document.getElementsByClassName('email-input')[0];
 const baseURL = 'https://kf017036-landing-page.herokuapp.com/emails'
 
 subscribeBtn.addEventListener('click', () => {
     //get the text in input element
-    const email = document.getElementsByClassName('email-input')[0];
     if(email.value === '') {
         return;
     }
@@ -21,7 +21,6 @@ subscribeBtn.addEventListener('click', () => {
 });
 
 unsubscribeBtn.addEventListener('click', () => {
-    const email = document.getElementsByClassName('email-input')[0];
     if(validateAddress(email.value)) {
         let body = {
             email: email.value
