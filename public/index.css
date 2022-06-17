@@ -45,3 +45,57 @@ body {
     font-weight: 400;
     
 }
+
+.email-form {
+    width: 20vw;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.email-input {
+    width: 20vw;
+    height: 5vh;
+    min-width: 250px;
+    min-height: 25px;
+    font-size: 14pt;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+}
+
+.subscribe-button {
+    height: 5vh;
+    width: 8vw;
+    min-width: 100px;
+    min-height: 25px;
+    margin-top: 5px;
+    background-color: royalblue;
+    border: none;
+    border-radius: 3px;
+    font-size: 12pt;
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+}
+
+.subscribe-button:hover {
+    cursor: pointer;
+    background-color: #6c8ae6;
+}
+
+.unsubscribe-button {
+    font-size: 9pt;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    color: gray;
+    background: none;
+    border: none;
+    margin-top: 3px;
+}
+
+.unsubscribe-button:hover {
+    cursor: pointer;
+    color: #0C0A3E
+}
