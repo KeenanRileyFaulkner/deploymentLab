@@ -11,7 +11,7 @@ subscribeBtn.addEventListener('click', () => {
     if(validateAddress(email.value)) {
         const emailToSend = email.value.toLowerCase();
         let body = {
-            email: emailToSend;
+            email: emailToSend
         }
 
         axios.post(baseURL, body).then(responseCallback).catch(errCallback);
