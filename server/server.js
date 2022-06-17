@@ -12,9 +12,9 @@ app.use(express.json());
 
 app.use(express.static(path.join(__dirname, '../public')));
 
-app.post(`${baseURL}/seed`, seed);
-app.post(`${baseURL}/emails`, addEmail);
-app.put(`${baseURL}/emails`, removeEmail);
+app.post(`/seed`, seed);
+app.post(`/emails`, addEmail);
+app.put(`/emails`, removeEmail);
 
 const port = process.env.PORT || 4005;
 app.listen(port, () => {
