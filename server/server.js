@@ -3,7 +3,6 @@ const cors = require('cors');
 const path = require('path');
 const {addEmail, removeEmail} = require('./controller.js');
 const {seed} = require('./seed.js');
-const baseURL = 'https://kf017036-landing-page.herokuapp.com'
 
 
 const app = express();
