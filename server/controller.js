@@ -1,3 +1,4 @@
+require('dotenv').config();
 const {CONNECTION_STRING} = process.env;
 const Sequelize = require('sequelize');
 const sequelize = new Sequelize(CONNECTION_STRING, {
@@ -25,7 +26,7 @@ module.exports = {
         sequelize.query(`
             DELETE FROM emails WHERE email IN ('${email}');
         `)
-            .then(() => res.status(200).send('You have been unsubscribed'));
+            .then(() => res.status(200).send('You have been unsubscribed'))
             .catch((err) => console.log(err));
     }
 }
