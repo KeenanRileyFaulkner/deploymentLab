@@ -18,8 +18,8 @@ var rollbar = new Rollbar({
   captureUnhandledRejections: true,
 })
 
-//send a generic message to rollbar
-rollbar.log('Hello world!');
+//send a critical error about how boring this app is (unassociated from an endpoint)
+rollbar.critical('This app is so boring');
 
 module.exports = {
     addEmail: (req, res) => {
@@ -28,7 +28,11 @@ module.exports = {
             INSERT INTO emails(email)
             VALUES ('${email}');
         `)
-            .then(() => res.status(200).send('Successfully subscribed'))
+            .then(() => {
+                rollbar.info('User added to database');
+                rollbar.warn('Duplicate users are not restricted');
+                res.status(200).send('Successfully subscribed')
+            })
             .catch((err) => console.log(err));
     },
 
@@ -37,7 +41,10 @@ module.exports = {
         sequelize.query(`
             DELETE FROM emails WHERE email IN ('${email}');
         `)
-            .then(() => res.status(200).send('You have been unsubscribed'))
+            .then(() => {
+                rollbar.warn('User unsubscribed. Operation may have been unsuccessful if not previously in db');
+                res.status(200).send('You have been unsubscribed')
+            })
             .catch((err) => console.log(err));
     },
 
