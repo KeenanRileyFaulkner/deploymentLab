@@ -33,7 +33,7 @@ module.exports = {
                 rollbar.warn('Duplicate users are not restricted');
                 res.status(200).send('Successfully subscribed')
             })
-            .catch((err) => console.log(err));
+            .catch((err) => rollbar.critical(err));
     },
 
     removeEmail: (req, res) => {
@@ -45,7 +45,7 @@ module.exports = {
                 rollbar.warn('User unsubscribed. Operation may have been unsuccessful if not previously in db');
                 res.status(200).send('You have been unsubscribed')
             })
-            .catch((err) => console.log(err));
+            .catch((err) => rollbar.critical(err));
     },
 
     useBadMethod: (req, res) => {
