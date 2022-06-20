@@ -9,6 +9,17 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// include and initialize the rollbar library with your access token
+var Rollbar = require('rollbar')
+var rollbar = new Rollbar({
+  accessToken: '987c7917deec4b63b2c22d7fddf0fae5',
+  captureUncaught: true,
+  captureUnhandledRejections: true,
+})
+
+//send a generic message to rollbar
+rollbar.log('Hello world!');
+
 app.use(express.static(path.join(__dirname, '../public')));
 
 app.post(`/seed`, seed);

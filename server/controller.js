@@ -10,17 +10,6 @@ const sequelize = new Sequelize(CONNECTION_STRING, {
     }
 });
 
-// include and initialize the rollbar library with your access token
-var Rollbar = require('rollbar')
-var rollbar = new Rollbar({
-  accessToken: '987c7917deec4b63b2c22d7fddf0fae5',
-  captureUncaught: true,
-  captureUnhandledRejections: true,
-})
-
-//send a generic message to rollbar
-rollbar.log('Hello world!');
-
 module.exports = {
     addEmail: (req, res) => {
         const {email} = req.body;
