@@ -17,6 +17,9 @@ var rollbar = new Rollbar({
   captureUnhandledRejections: true,
 })
 
+//send a generic message to rollbar
+rollbar.log('Hello world!');
+
 app.use(express.static(path.join(__dirname, '../public')));
 
 app.post(`/seed`, seed);
