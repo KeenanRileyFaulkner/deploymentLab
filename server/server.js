@@ -27,7 +27,7 @@ app.post(`/emails`, addEmail);
 app.put(`/emails`, removeEmail);
 
 app.get('/dne', (req, res) => {
-    callNonExistentMethod();
+    // callNonExistentMethod();
     res.status(200).send('GET successful at /dne').catch(err => rollbar.error(err));
 });
 
